@@ -1,3 +1,5 @@
+import 'package:chatbot_app/core/utils/app_routes.dart';
+import 'package:chatbot_app/core/utils/functions/my_app_routes.dart';
 import 'package:flutter/material.dart';
 
 class OpenAIChatApp extends StatelessWidget {
@@ -5,6 +7,10 @@ class OpenAIChatApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.splashView,
+      routes: myAppRoutes,
+    );
   }
 }
