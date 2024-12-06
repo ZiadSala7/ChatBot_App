@@ -1,6 +1,6 @@
 import 'package:chatbot_app/core/utils/app_images.dart';
-import 'package:chatbot_app/features/home/presentation/views/widgets/custom_bottom_chatbar_item.dart';
-import 'package:chatbot_app/features/home/presentation/views/widgets/custom_text_field.dart';
+import 'custom_bottom_chatbar_item.dart';
+import 'custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class CustomHomeBottomBarChat extends StatelessWidget {
