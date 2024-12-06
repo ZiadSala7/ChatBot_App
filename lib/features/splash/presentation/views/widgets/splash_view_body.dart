@@ -1,4 +1,4 @@
-import 'package:chatbot_app/features/splash/presentation/views/widgets/custom_robot_splash.dart';
+import 'package:chatbot_app/core/common/custom_robot_widget.dart';
 import 'package:chatbot_app/features/splash/presentation/views/widgets/splash_stateful_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class SplashViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          CustomRobotSplash(),
+          CustomRobotWidget(),
           Spacer(),
           SplashStatefulWidget(),
         ],

@@ -2,9 +2,11 @@ import 'package:animate_do/animate_do.dart';
 import 'package:chatbot_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
-class CustomRobotSplash extends StatelessWidget {
-  const CustomRobotSplash({
+class CustomRobotWidget extends StatelessWidget {
+  final String image;
+  const CustomRobotWidget({
     super.key,
+    this.image = AppImages.splash,
   });
 
   @override
@@ -14,7 +16,7 @@ class CustomRobotSplash extends StatelessWidget {
       curve: Easing.standard,
       animate: true,
       child: Image.asset(
-        AppImages.splash,
+        image,
         height: 450,
       ),
     );
