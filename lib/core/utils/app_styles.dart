@@ -12,4 +12,9 @@ class AppStyles {
     fontFamily: MyStrings.orbitronFamily,
     color: Colors.white,
   );
+  static const TextStyle textStyle20ParkinsBold = TextStyle(
+    fontSize: 20,
+    fontFamily: MyStrings.parkinsansFamily,
+    fontWeight: FontWeight.w700,
+  );
 }

@@ -9,4 +9,5 @@ class AppImages {
   static const String chatProfile = 'assets/images/chatProf.png';
   static const String microphone = 'assets/images/microphone.png';
   static const String galleryIcon = 'assets/images/gallery.png';
+  static const String sendIcon = 'assets/images/send.png';
 }
