@@ -4,6 +4,7 @@ import 'package:chatbot_app/core/utils/my_strings.dart';
 import 'package:chatbot_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:chatbot_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({
@@ -27,7 +28,10 @@ class OnboardingPageView extends StatelessWidget {
         OnboardingViewBody(
           image: AppImages.onboarding,
           txt: MyStrings.onboardingTxt2,
-          onPressed: () {
+          onPressed: () async {
+            final shaerdPref = await SharedPreferences.getInstance();
+            shaerdPref.setBool('isClicked', true);
+            // ignore: use_build_context_synchronously
             Navigator.pushReplacementNamed(context, AppRoutes.homeView);
           },
         ),
