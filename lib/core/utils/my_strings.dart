@@ -7,4 +7,5 @@ class MyStrings {
   static const String onboardingTxt2 =
       'Where you can create\nimages find things\nfrom photo, and more !';
   static const String textFieldTxt = 'Type Your message here';
+  static const String apiKey = 'AIzaSyBMzT-H-4o8R9N0G2SMbESbHgii9Iau7JM';
 }
