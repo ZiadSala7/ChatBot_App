@@ -13,7 +13,7 @@ class _MessagesDisplayWidgetState extends State<MessagesDisplayWidget> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 4,
+      itemCount: 20,
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 10),

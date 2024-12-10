@@ -18,8 +18,10 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(height: 60),
             CustomHomeViewAppBar(),
             Expanded(child: MessagesDisplayWidget()),
-            CustomHomeBottomBarChat(),
-            SizedBox(height: 15),
+            Padding(
+              padding: EdgeInsets.only(top: 10, bottom: 10),
+              child: CustomHomeBottomBarChat(),
+            ),
           ],
         ),
       ),
