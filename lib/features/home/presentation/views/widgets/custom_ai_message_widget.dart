@@ -12,25 +12,22 @@ class CustomAIMessageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        FittedBox(
-          fit: BoxFit.contain,
-          child: Container(
-            width: 200,
-            padding: const EdgeInsets.all(15),
-            decoration: chatMessageDecorationMethod(color: blueColor),
-            child: Text(
-              "Hello Brother hhhhhhhhhhhhhhhhhhhhhhhh",
-              style: AppStyles.textChat14Parkins.copyWith(color: Colors.white),
-            ),
-          ),
-        ),
-        const SizedBox(width: 10),
         SizedBox(
           height: 50,
           width: 50,
           child: Image.asset(AppImages.appLogo),
+        ),
+        const SizedBox(width: 10),
+        Container(
+          constraints: const BoxConstraints(maxWidth: 200),
+          padding: const EdgeInsets.all(15),
+          decoration: chatMessageDecorationMethod(color: mainColor),
+          child: Text(
+            "Hello Brother hhhhhhhhhhhhhhhhhhhhhhhh",
+            style: AppStyles.textChat14Parkins.copyWith(color: Colors.black),
+          ),
         ),
       ],
     );

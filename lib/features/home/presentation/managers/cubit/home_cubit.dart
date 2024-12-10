@@ -7,12 +7,6 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitialState());
   List<String?> lst = [];
 
-  addMessages({required String message}) {
-    emit(HomeLoadingState());
-    lst.add(message);
-    emit(HomeSuccessState());
-  }
-
   Future<String?> sendRequest({required String message}) async {
     emit(HomeLoadingState());
     try {

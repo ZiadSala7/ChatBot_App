@@ -10,4 +10,5 @@ class AppImages {
   static const String microphone = 'assets/images/microphone.png';
   static const String galleryIcon = 'assets/images/gallery.png';
   static const String sendIcon = 'assets/images/send.png';
+  static const String avatar = 'assets/images/avatar.webp';
 }

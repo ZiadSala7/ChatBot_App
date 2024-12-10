@@ -12,23 +12,23 @@ class CustomHumanMessageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        SizedBox(
-          height: 50,
-          width: 50,
-          child: Image.asset(AppImages.appLogo),
-        ),
-        const SizedBox(width: 10),
         Container(
           constraints: const BoxConstraints(maxWidth: 200),
           padding: const EdgeInsets.all(15),
-          decoration: chatMessageDecorationMethod(color: mainColor),
+          decoration: chatMessageDecorationMethod(color: blueColor),
           child: Text(
             textWidthBasis: TextWidthBasis.longestLine,
             "Hello Brother 333333333333333333333333333333333",
-            style: AppStyles.textChat14Parkins.copyWith(color: Colors.black),
+            style: AppStyles.textChat14Parkins.copyWith(color: Colors.white),
           ),
+        ),
+        const SizedBox(width: 10),
+        SizedBox(
+          height: 50,
+          width: 50,
+          child: Image.asset(AppImages.avatar),
         ),
       ],
     );

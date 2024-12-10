@@ -18,8 +18,8 @@ class _MessagesDisplayWidgetState extends State<MessagesDisplayWidget> {
         return Padding(
           padding: const EdgeInsets.only(bottom: 10),
           child: index % 2 == 0
-              ? const CustomAIMessageWidget()
-              : const CustomHumanMessageWidget(),
+              ? const CustomHumanMessageWidget()
+              : const CustomAIMessageWidget(),
         );
       },
     );
