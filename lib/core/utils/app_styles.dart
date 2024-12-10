@@ -17,4 +17,9 @@ class AppStyles {
     fontFamily: MyStrings.parkinsansFamily,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle textChat14Parkins = TextStyle(
+    fontSize: 14,
+    fontFamily: MyStrings.parkinsansFamily,
+    fontWeight: FontWeight.w500,
+  );
 }
