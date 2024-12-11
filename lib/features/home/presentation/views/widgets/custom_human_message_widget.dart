@@ -5,8 +5,10 @@ import 'package:chatbot_app/features/home/presentation/views/widgets/chat_decora
 import 'package:flutter/material.dart';
 
 class CustomHumanMessageWidget extends StatelessWidget {
+  final String txt;
   const CustomHumanMessageWidget({
     super.key,
+    required this.txt,
   });
 
   @override
@@ -15,12 +17,12 @@ class CustomHumanMessageWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          constraints: const BoxConstraints(maxWidth: 200),
+          constraints: const BoxConstraints(maxWidth: 250),
           padding: const EdgeInsets.all(15),
           decoration: chatMessageDecorationMethod(color: blueColor),
           child: Text(
             textWidthBasis: TextWidthBasis.longestLine,
-            "Hello Brother 333333333333333333333333333333333",
+            txt,
             style: AppStyles.textChat14Parkins.copyWith(color: Colors.white),
           ),
         ),

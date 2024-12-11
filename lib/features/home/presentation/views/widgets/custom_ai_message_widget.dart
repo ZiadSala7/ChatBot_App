@@ -5,8 +5,10 @@ import 'package:chatbot_app/features/home/presentation/views/widgets/chat_decora
 import 'package:flutter/material.dart';
 
 class CustomAIMessageWidget extends StatelessWidget {
+  final String txt;
   const CustomAIMessageWidget({
     super.key,
+    required this.txt,
   });
 
   @override
@@ -21,11 +23,11 @@ class CustomAIMessageWidget extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Container(
-          constraints: const BoxConstraints(maxWidth: 200),
+          constraints: const BoxConstraints(maxWidth: 250),
           padding: const EdgeInsets.all(15),
           decoration: chatMessageDecorationMethod(color: mainColor),
           child: Text(
-            "Hello Brother hhhhhhhhhhhhhhhhhhhhhhhh",
+            txt,
             style: AppStyles.textChat14Parkins.copyWith(color: Colors.black),
           ),
         ),
