@@ -17,7 +17,7 @@ class CustomHumanMessageWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          constraints: const BoxConstraints(maxWidth: 250),
+          constraints: const BoxConstraints(maxWidth: 230),
           padding: const EdgeInsets.all(15),
           decoration: chatMessageDecorationMethod(color: blueColor),
           child: Text(

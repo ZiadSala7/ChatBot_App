@@ -28,9 +28,7 @@ class _MessagesDisplayWidgetState extends State<MessagesDisplayWidget> {
                   ? CustomHumanMessageWidget(
                       txt: lst[index]!,
                     )
-                  : CustomAIMessageWidget(
-                      txt: lst[index]!,
-                    ),
+                  : CustomAIMessageWidget(txt: lst[index]!),
             );
           },
         );
