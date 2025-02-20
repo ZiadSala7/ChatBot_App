@@ -8,29 +8,16 @@ class CustomHomeViewAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         InkWell(
           onTap: () {},
           child: Image.asset(AppImages.chatArrow),
         ),
+        const SizedBox(width: 110),
         const Text(
           "AI Chat",
           style: AppStyles.textStyle20ParkinsBold,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            InkWell(
-              onTap: () {},
-              child: Image.asset(AppImages.uploadIcon),
-            ),
-            InkWell(
-              onTap: () {},
-              child: Image.asset(AppImages.muteIcon),
-            ),
-          ],
-        )
       ],
     );
   }

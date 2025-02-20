@@ -13,11 +13,6 @@ class CustomHomeBottomBarChat extends StatelessWidget {
     return Row(
       children: [
         CustomBottomChatBarItem(
-          image: AppImages.microphone,
-          onPressed: () {},
-        ),
-        const SizedBox(width: 10),
-        CustomBottomChatBarItem(
           image: AppImages.galleryIcon,
           onPressed: () {},
         ),
