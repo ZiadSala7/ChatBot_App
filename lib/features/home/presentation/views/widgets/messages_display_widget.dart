@@ -5,14 +5,9 @@ import 'package:chatbot_app/features/home/presentation/views/widgets/custom_huma
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MessagesDisplayWidget extends StatefulWidget {
+class MessagesDisplayWidget extends StatelessWidget {
   const MessagesDisplayWidget({super.key});
 
-  @override
-  State<MessagesDisplayWidget> createState() => _MessagesDisplayWidgetState();
-}
-
-class _MessagesDisplayWidgetState extends State<MessagesDisplayWidget> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<HomeCubit, HomeState>(
