@@ -21,7 +21,6 @@ class HomeViewBody extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 60),
-              CustomHomeViewAppBar(),
               Expanded(child: MessagesDisplayWidget()),
               Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
