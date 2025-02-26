@@ -19,7 +19,8 @@ class CustomTextField extends StatelessWidget {
         onSubmitted: (value) async {
           if (value.isNotEmpty) {
             BlocProvider.of<HomeCubit>(context).lst.add(value);
-            BlocProvider.of<HomeCubit>(context).sendRequest(message: value);
+            BlocProvider.of<HomeCubit>(context)
+                .sendTextAndImageRequest(message: value);
             chatController.clear();
           }
         },

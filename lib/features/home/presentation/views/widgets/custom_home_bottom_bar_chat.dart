@@ -17,7 +17,7 @@ class CustomHomeBottomBarChat extends StatelessWidget {
           image: AppImages.galleryIcon,
           onPressed: () async {
             final ImagePicker imagePicker = ImagePicker();
-            final List<XFile>? images = await imagePicker.pickMultiImage();
+            final List<XFile> images = await imagePicker.pickMultiImage();
           },
         ),
         const SizedBox(width: 10),
