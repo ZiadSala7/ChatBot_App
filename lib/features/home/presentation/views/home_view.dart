@@ -7,6 +7,26 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: homeViewAppBar(), body: const HomeViewBody());
+    return Scaffold(
+      appBar: homeViewAppBar(context),
+      body: const HomeViewBody(),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            Row(
+              spacing: 16,
+              children: [
+                const SizedBox(),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.add),
+                ),
+                const Text('Create New Chat')
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
