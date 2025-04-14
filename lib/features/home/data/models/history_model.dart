@@ -1,7 +1,17 @@
-class HistoryModel {
-  final String id;
-  final String? name;
-  final DateTime dateTime;
+import 'package:hive/hive.dart';
 
-  HistoryModel({required this.id, required this.name, required this.dateTime});
+@HiveType(typeId: 0)
+class HistoryModel extends HiveObject {
+  @HiveField(0)
+  final String id;
+  @HiveField(1)
+  final DateTime dateTime;
+  @HiveField(2)
+  final String? name;
+
+  HistoryModel({
+    required this.id,
+    required this.dateTime,
+    required this.name,
+  });
 }

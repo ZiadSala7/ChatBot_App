@@ -1,6 +1,9 @@
+import '../../managers/history_cubit/history_cubit.dart';
+import '../../managers/history_cubit/history_states.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'drawer_show_dialog.dart';
+import 'chat_history_card.dart';
 
 class ShowHistoryModelListViewBuilder extends StatelessWidget {
   const ShowHistoryModelListViewBuilder({
@@ -9,37 +12,18 @@ class ShowHistoryModelListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return Card(
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Column(
-                    children: [
-                      Text('Hello Brooo'),
-                      Text('Hello Brooo'),
-                    ],
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      drawerShowDialog(context);
-                    },
-                    icon: const Icon(
-                      Icons.delete,
-                      color: Color.fromARGB(128, 255, 86, 74),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
+    return BlocBuilder<HistoryCubit, HistoryStates>(
+      builder: (context, state) {
+        var cubit = BlocProvider.of<HistoryCubit>(context);
+        return Expanded(
+          child: ListView.builder(
+            itemCount: cubit.hModels.length,
+            itemBuilder: (context, index) {
+              return ChatHistoryCard(model: cubit.hModels[index]);
+            },
+          ),
+        );
+      },
     );
   }
 }

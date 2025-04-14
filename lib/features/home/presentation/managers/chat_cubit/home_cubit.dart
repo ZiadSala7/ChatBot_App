@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 import 'package:chatbot_app/core/utils/my_strings.dart';
-import 'package:chatbot_app/features/home/presentation/managers/cubit/home_state.dart';
+import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:image_picker/image_picker.dart';

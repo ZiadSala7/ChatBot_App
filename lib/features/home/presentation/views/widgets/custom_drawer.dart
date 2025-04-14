@@ -19,6 +19,7 @@ class CustomDrawer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
+            // button to add new history model
             const CreateNewChatButton(),
             const Divider(thickness: 2),
             Text(

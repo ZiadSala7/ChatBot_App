@@ -1,4 +1,4 @@
-import '../../managers/cubit/home_cubit.dart';
+import '../../managers/chat_cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_home_bottom_bar_chat.dart';
 import 'messages_display_widget.dart';

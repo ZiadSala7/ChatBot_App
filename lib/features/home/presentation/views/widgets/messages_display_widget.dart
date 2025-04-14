@@ -1,5 +1,5 @@
-import 'package:chatbot_app/features/home/presentation/managers/cubit/home_cubit.dart';
-import 'package:chatbot_app/features/home/presentation/managers/cubit/home_state.dart';
+import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/home_cubit.dart';
+import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/home_state.dart';
 import 'package:chatbot_app/features/home/presentation/views/widgets/custom_ai_message_widget.dart';
 import 'package:chatbot_app/features/home/presentation/views/widgets/custom_human_message_widget.dart';
 import 'package:flutter/widgets.dart';
