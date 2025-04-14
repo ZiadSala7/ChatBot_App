@@ -11,7 +11,7 @@ class HistoryCubit extends Cubit<HistoryStates> {
   // get all history models
   initList() {
     hModels = HiveServices.getAllHistoryModels();
-    emit(GetAllHistoryModels());
+    hModels.isEmpty ? addNewHistoryModel() : emit(GetAllHistoryModels());
   }
 
   // add new history model
@@ -22,7 +22,9 @@ class HistoryCubit extends Cubit<HistoryStates> {
 
   // delete history model
   deleteHistoryModel(HistoryModel hModel) async {
-    await HiveServices.deleteHistoryModel(hModel);
-    initList();
+    if (hModels.length > 1) {
+      await HiveServices.deleteHistoryModel(hModel);
+      initList();
+    }
   }
 }
