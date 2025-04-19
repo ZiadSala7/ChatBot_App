@@ -1,4 +1,5 @@
 import 'package:hive/hive.dart';
+part 'history_model.g.dart';
 
 @HiveType(typeId: 0)
 class HistoryModel extends HiveObject {

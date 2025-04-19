@@ -1,6 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:chatbot_app/features/home/data/models/history_model.dart';
+import 'package:chatbot_app/features/home/data/models/history/history_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,7 +40,7 @@ class DrawerShowDialog extends StatelessWidget {
                         color: Colors.red,
                         onPressed: () {
                           BlocProvider.of<HistoryCubit>(context)
-                              .deleteHistoryModel(model);
+                              .deleteHistoryModel(model, context);
 
                           Navigator.of(context).pop();
                         },

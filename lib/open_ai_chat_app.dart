@@ -3,7 +3,7 @@ import 'package:chatbot_app/core/utils/functions/my_app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'features/home/presentation/managers/chat_cubit/home_cubit.dart';
+import 'features/home/presentation/managers/chat_cubit/chat_cubit.dart';
 import 'features/home/presentation/managers/history_cubit/history_cubit.dart';
 
 class OpenAIChatApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class OpenAIChatApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => HistoryCubit()..initList()),
-        BlocProvider(create: (context) => HomeCubit()),
+        BlocProvider(create: (context) => ChatCubit()..getAllChatModels()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

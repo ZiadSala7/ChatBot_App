@@ -1,14 +1,15 @@
 import 'package:chatbot_app/constants.dart';
 import 'package:chatbot_app/core/utils/app_images.dart';
 import 'package:chatbot_app/core/utils/app_styles.dart';
+import 'package:chatbot_app/features/home/data/models/chat/chat_model.dart';
 import 'package:chatbot_app/features/home/presentation/views/widgets/chat_decoration_method.dart';
 import 'package:flutter/material.dart';
 
 class CustomHumanMessageWidget extends StatelessWidget {
-  final String txt;
+  final ChatModel model;
   const CustomHumanMessageWidget({
     super.key,
-    required this.txt,
+    required this.model,
   });
 
   @override
@@ -22,7 +23,7 @@ class CustomHumanMessageWidget extends StatelessWidget {
           decoration: chatMessageDecorationMethod(color: blueColor),
           child: Text(
             textWidthBasis: TextWidthBasis.longestLine,
-            txt,
+            model.message,
             style: AppStyles.textChat14Parkins.copyWith(color: Colors.white),
           ),
         ),

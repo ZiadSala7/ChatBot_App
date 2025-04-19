@@ -1,34 +1,16 @@
-import 'dart:async';
-
 import 'package:chatbot_app/constants.dart';
 import 'package:chatbot_app/core/utils/app_images.dart';
 import 'package:chatbot_app/core/utils/app_styles.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:chatbot_app/features/home/data/models/chat/chat_model.dart';
 import 'chat_decoration_method.dart';
 import 'package:flutter/material.dart';
 
-class CustomAIMessageWidget extends StatefulWidget {
-  final String txt;
+class CustomAIMessageWidget extends StatelessWidget {
+  final ChatModel model;
   const CustomAIMessageWidget({
     super.key,
-    required this.txt,
+    required this.model,
   });
-
-  @override
-  State<CustomAIMessageWidget> createState() => _CustomAIMessageWidgetState();
-}
-
-class _CustomAIMessageWidgetState extends State<CustomAIMessageWidget> {
-  bool isTrue = false;
-  @override
-  void initState() {
-    super.initState();
-    Timer(const Duration(seconds: 3), () {
-      setState(() {
-        isTrue = true;
-      });
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,24 +23,15 @@ class _CustomAIMessageWidgetState extends State<CustomAIMessageWidget> {
           child: Image.asset(AppImages.appLogo),
         ),
         const SizedBox(width: 10),
-        isTrue
-            ? Container(
-                constraints: const BoxConstraints(maxWidth: 230),
-                padding: const EdgeInsets.all(15),
-                decoration: chatMessageDecorationMethod(color: mainColor),
-                child: Text(
-                  widget.txt,
-                  style:
-                      AppStyles.textChat14Parkins.copyWith(color: Colors.black),
-                ),
-              )
-            : const SizedBox(
-                width: 50,
-                child: SpinKitThreeInOut(
-                  color: blueColor,
-                  size: 20,
-                ),
-              ),
+        Container(
+          constraints: const BoxConstraints(maxWidth: 230),
+          padding: const EdgeInsets.all(15),
+          decoration: chatMessageDecorationMethod(color: mainColor),
+          child: Text(
+            model.response,
+            style: AppStyles.textChat14Parkins.copyWith(color: Colors.black),
+          ),
+        )
       ],
     );
   }

@@ -1,12 +1,10 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+part of 'history_model.dart';
+
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
-
-import 'package:hive/hive.dart' show BinaryReader, BinaryWriter, TypeAdapter;
-
-import 'history_model.dart';
 
 class HistoryModelAdapter extends TypeAdapter<HistoryModel> {
   @override
