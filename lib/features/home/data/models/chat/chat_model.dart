@@ -11,11 +11,14 @@ class ChatModel {
   final String response;
   @HiveField(3)
   final List<String>? images;
+  @HiveField(4)
+  final bool isResponse;
 
   ChatModel({
     required this.id,
     required this.message,
     required this.response,
     required this.images,
+    this.isResponse = false,
   });
 }

@@ -1,11 +1,12 @@
 import 'package:chatbot_app/constants.dart';
 import 'package:chatbot_app/core/cache/cashe_helper.dart';
-import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/chat_cubit.dart';
-import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/chat_state.dart';
+import '../../managers/chat_cubit/chat_cubit.dart';
+import '../../managers/chat_cubit/chat_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../data/models/history/history_model.dart';
+import 'card_text_details.dart';
 import 'drawer_show_dialog.dart';
 
 class ChatHistoryCard extends StatelessWidget {
@@ -28,22 +29,13 @@ class ChatHistoryCard extends StatelessWidget {
             cubit.getAllChatModels();
           },
           child: Card(
+            color: mainColor,
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    children: [
-                      FittedBox(
-                        child: Text(
-                          model.dateTime.day.toString(),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      Text(model.dateTime.minute.toString()),
-                    ],
-                  ),
+                  CardTextDetails(model: model),
                   IconButton(
                     onPressed: () {
                       showDialog(

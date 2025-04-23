@@ -1,4 +1,6 @@
 import 'package:chatbot_app/core/utils/app_images.dart';
+import '../../managers/image_cubit/image_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_bottom_chatbar_item.dart';
 import 'custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +17,7 @@ class CustomHomeBottomBarChat extends StatelessWidget {
         CustomBottomChatBarItem(
           image: AppImages.galleryIcon,
           onPressed: () async {
-            // final ImagePicker imagePicker = ImagePicker();
-            // final List<XFile> images = await imagePicker.pickMultiImage();
+            await BlocProvider.of<ImageCubit>(context).pickImages();
           },
         ),
         const SizedBox(width: 10),

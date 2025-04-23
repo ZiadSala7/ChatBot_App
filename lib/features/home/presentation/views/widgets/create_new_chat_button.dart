@@ -1,3 +1,4 @@
+import 'package:chatbot_app/constants.dart';
 import '../../managers/history_cubit/history_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +19,7 @@ class CreateNewChatButton extends StatelessWidget {
           spacing: 16,
           children: [
             FloatingActionButton(
+              backgroundColor: mainColor,
               onPressed: () async {
                 await BlocProvider.of<HistoryCubit>(context)
                     .addNewHistoryModel();
