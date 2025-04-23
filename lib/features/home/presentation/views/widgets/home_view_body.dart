@@ -1,9 +1,9 @@
-import 'dart:io';
 import '../../managers/image_cubit/image_cubit.dart';
 import '../../managers/image_cubit/image_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_home_bottom_bar_chat.dart';
+import 'found_image_display.dart';
 import 'messages_display_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -23,21 +23,13 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 15),
+                // to display all chat models
                 const Expanded(child: MessagesDisplayWidget()),
+                // check if there are images in image cubit list
                 state is FoundImages
-                    ? SizedBox(
-                        height: 150,
-                        width: double.infinity,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: cubit.images.length,
-                          itemBuilder: (context, index) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5),
-                            child: Image.file(File(cubit.images[index].path)),
-                          ),
-                        ),
-                      )
+                    ? FoundImagesDisplay(cubit: cubit)
                     : const SizedBox(),
+                // bottom part of the app (Textfield and gallery button)
                 const Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 10),
                   child: CustomHomeBottomBarChat(),

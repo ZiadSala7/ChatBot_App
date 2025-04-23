@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:chatbot_app/core/utils/app_images.dart';
+import '../utils/app_images.dart';
 import 'package:flutter/material.dart';
 
 class CustomRobotWidget extends StatelessWidget {

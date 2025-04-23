@@ -1,7 +1,7 @@
-import 'package:chatbot_app/features/home/data/models/chat/chat_model.dart';
-import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/chat_cubit.dart';
-import 'package:chatbot_app/features/home/presentation/managers/chat_cubit/chat_state.dart';
-import 'package:chatbot_app/features/home/presentation/views/widgets/custom_ai_message_widget.dart';
+import '../../../data/models/chat/chat_model.dart';
+import '../../managers/chat_cubit/chat_cubit.dart';
+import '../../managers/chat_cubit/chat_state.dart';
+import 'custom_ai_message_widget.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

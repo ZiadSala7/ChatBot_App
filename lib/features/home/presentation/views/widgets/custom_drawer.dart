@@ -26,6 +26,7 @@ class CustomDrawer extends StatelessWidget {
               'Chat History',
               style: AppStyles.textStyle25.copyWith(color: Colors.black),
             ),
+            // list of history model in drawer
             const ShowHistoryModelListViewBuilder(),
           ],
         ),

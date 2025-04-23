@@ -1,6 +1,6 @@
-import 'package:chatbot_app/constants.dart';
-import 'package:chatbot_app/core/utils/app_images.dart';
-import 'package:chatbot_app/core/utils/my_strings.dart';
+import '../../../../../constants.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/my_strings.dart';
 import '../../managers/image_cubit/image_cubit.dart';
 import '../../../data/home_text_editing_controller.dart';
 import '../../../data/models/chat/chat_model.dart';
@@ -26,6 +26,7 @@ class CustomTextField extends StatelessWidget {
           child: TextField(
             onSubmitted: (value) {
               if (value.isNotEmpty) {
+                // convert xfile to string for the list in model
                 List<String> paths = image.images.map((x) => x.path).toList();
                 ChatModel model = ChatModel(
                   id: currentId!,
@@ -33,7 +34,9 @@ class CustomTextField extends StatelessWidget {
                   response: '',
                   images: paths,
                 );
+                // add new chat model
                 cubit.addChatModel(model);
+                // to reinitialize image list in image cubit
                 image.images.isNotEmpty
                     ? BlocProvider.of<ImageCubit>(context)
                         .reInitializeImageList()

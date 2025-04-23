@@ -1,8 +1,8 @@
-import 'package:chatbot_app/core/utils/app_images.dart';
-import 'package:chatbot_app/core/utils/app_routes.dart';
-import 'package:chatbot_app/core/utils/my_strings.dart';
-import 'package:chatbot_app/features/onboarding/presentation/views/onboarding_view.dart';
-import 'package:chatbot_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_routes.dart';
+import '../../../../../core/utils/my_strings.dart';
+import '../onboarding_view.dart';
+import 'onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

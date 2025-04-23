@@ -1,4 +1,4 @@
-import 'package:chatbot_app/core/utils/app_images.dart';
+import '../../../../../core/utils/app_images.dart';
 import '../../managers/image_cubit/image_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_bottom_chatbar_item.dart';

@@ -1,5 +1,5 @@
-import 'package:chatbot_app/core/common/custom_robot_widget.dart';
-import 'package:chatbot_app/features/splash/presentation/views/widgets/splash_stateful_widget.dart';
+import '../../../../../core/common/custom_robot_widget.dart';
+import 'splash_stateful_widget.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {

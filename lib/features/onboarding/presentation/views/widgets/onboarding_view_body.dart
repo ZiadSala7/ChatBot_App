@@ -1,8 +1,6 @@
-import 'package:chatbot_app/core/common/custom_robot_widget.dart';
-import 'package:chatbot_app/core/utils/app_images.dart';
-import 'package:chatbot_app/core/utils/app_styles.dart';
-import 'package:chatbot_app/features/splash/presentation/views/widgets/rps_custom_painter.dart';
+import '../../../../../core/common/custom_robot_widget.dart';
 import 'package:flutter/material.dart';
+import 'onboarding_stack.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   final String image;
@@ -26,32 +24,7 @@ class OnboardingViewBody extends StatelessWidget {
         children: [
           CustomRobotWidget(image: image),
           const Spacer(),
-          Stack(
-            children: [
-              SizedBox(
-                height: 370,
-                width: double.infinity,
-                child: CustomPaint(painter: RPSCustomPainter()),
-              ),
-              Positioned(
-                bottom: 150,
-                left: 40,
-                child: Text(
-                  txt,
-                  style: AppStyles.textStyle25,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Positioned(
-                bottom: 30,
-                left: MediaQuery.of(context).size.width * .43,
-                child: InkWell(
-                  onTap: onPressed,
-                  child: Image.asset(AppImages.continueButton),
-                ),
-              ),
-            ],
-          ),
+          OnboardingStack(txt: txt, onPressed: onPressed),
         ],
       ),
     );

@@ -1,13 +1,12 @@
 // ignore_for_file: use_build_context_synchronously
-
-import 'package:chatbot_app/features/home/data/models/history/history_model.dart';
+import '../../../data/models/history/history_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 import '../../managers/history_cubit/history_cubit.dart';
 import '../../managers/history_cubit/history_states.dart';
-import 'dialog_elevated_button.dart';
+import 'dialog_buttons.dart';
 
 class DrawerShowDialog extends StatelessWidget {
   final HistoryModel model;
@@ -30,31 +29,7 @@ class DrawerShowDialog extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: AppStyles.textStyle20ParkinsBold,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      DialogElevatedButton(
-                        text: 'Delete',
-                        color: Colors.red,
-                        onPressed: () {
-                          BlocProvider.of<HistoryCubit>(context)
-                              .deleteHistoryModel(model, context);
-
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                      DialogElevatedButton(
-                        text: 'Cancel',
-                        color: Colors.green,
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
-                  ),
-                )
+                DialogButtons(model: model)
               ],
             ),
           ),

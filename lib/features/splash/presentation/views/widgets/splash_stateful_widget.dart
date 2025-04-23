@@ -2,9 +2,9 @@
 
 import 'dart:async';
 
-import 'package:chatbot_app/core/utils/app_routes.dart';
+import '../../../../../core/utils/app_routes.dart';
 import 'package:chatbot_app/core/utils/my_strings.dart';
-import 'package:chatbot_app/features/splash/presentation/views/widgets/custom_fade_in_up_splash.dart';
+import 'custom_fade_in_up_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

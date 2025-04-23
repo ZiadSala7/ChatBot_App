@@ -1,7 +1,7 @@
-import 'package:chatbot_app/constants.dart';
-import 'package:chatbot_app/core/utils/app_images.dart';
-import 'package:chatbot_app/core/utils/app_styles.dart';
-import 'package:chatbot_app/features/home/data/models/chat/chat_model.dart';
+import '../../../../../constants.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../../data/models/chat/chat_model.dart';
 import 'chat_decoration_method.dart';
 import 'package:flutter/material.dart';
 
