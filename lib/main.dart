@@ -1,8 +1,8 @@
-import 'package:chatbot_app/constants.dart';
-import 'package:chatbot_app/core/cache/cashe_helper.dart';
-import 'package:chatbot_app/core/hive/hive_services.dart';
+import 'constants.dart';
+import 'core/cache/cashe_helper.dart';
+import 'core/hive/hive_services.dart';
 import 'features/home/presentation/managers/image_cubit/image_cubit.dart';
-import 'package:chatbot_app/open_ai_chat_app.dart';
+import 'open_ai_chat_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'features/home/presentation/managers/chat_cubit/chat_cubit.dart';
